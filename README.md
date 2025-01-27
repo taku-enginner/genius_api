@@ -1,24 +1,12 @@
-# README
+# UtaSearch
+geniusAPI検証用のミニアプリです
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## できること
+* 曲名・アーティスト名から歌詞の検索ができます
+* 検索された歌詞はトップページの一覧から確認できます
 
-Things you may want to cover:
+# トップページ
+![image](https://github.com/user-attachments/assets/93c3e473-3611-45b2-9e93-0e2f96ea5dfd)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 使い方ページ
+![image](https://github.com/user-attachments/assets/4b0aec59-4cd8-4796-b30c-5583a5a8b915)
