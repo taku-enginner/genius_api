@@ -1,0 +1,12 @@
+<% content_for :title, "Editing search song" %>
+
+<h1>Editing search song</h1>
+
+<%= render "form", search_song: @search_song %>
+
+<br>
+
+<div>
+  <%= link_to "Show this search song", @search_song %> |
+  <%= link_to "Back to search songs", search_songs_path %>
+</div>

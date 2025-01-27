@@ -1,0 +1,17 @@
+<h1 class="text-2xl font-bold mb-4">検索結果</h1>
+
+<% if @hits.any? %>
+  <ul>
+    <% @hits.each do |hit| %>
+      <li class="mb-4 p-4 bg-white shadow-md rounded-lg">
+        <strong class="block text-gray-700 text-sm font-bold mb-2">Title:</strong>
+        <p class="text-gray-900 mb-2"><%= hit["result"]["title"] %></p>
+        
+        <strong class="block text-gray-700 text-sm font-bold mb-2">Artist:</strong>
+        <p class="text-gray-900 mb-2"><%= hit["result"]["primary_artist"]["name"] %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No results found.</p>
+<% end %>

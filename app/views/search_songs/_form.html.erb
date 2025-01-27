@@ -1,0 +1,25 @@
+<%= form_with model: @search_song, url: search_results_search_songs_path, method: :get, local: true, class: "flex items-center space-x-4" do |form| %>
+  <% if @search_song.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@search_song.errors.count, "error") %> prohibited this search_song from being saved:</h2>
+
+      <ul>
+        <% @search_song.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, "Title", class: "block text-sm font-bold mb-2 text-white" %>
+    <%= form.text_field :title, class: "shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div>
+    <%= form.label :artist_name, "Artist", class: "block text-white text-sm font-bold mb-2" %>
+    <%= form.text_field :artist_name, class: "shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div>
+    <%= form.submit "検索", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+  </div>
+<% end %>
