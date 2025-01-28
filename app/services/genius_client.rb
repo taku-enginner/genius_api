@@ -1,11 +1,11 @@
-require 'httparty'
-require 'json'
+require "httparty"
+require "json"
 
 class GeniusClient
   include HTTParty
-  base_uri 'https://api.genius.com'
-  
-  def initialize(access_token={})
+  base_uri "https://api.genius.com"
+
+  def initialize(access_token = {})
     access_token = Rails.application.credentials[:genius_access_token]
     @headers = {
       "Authorization" => "Bearer #{access_token}"
@@ -44,5 +44,3 @@ class GeniusClient
     end
   end
 end
-
-
