@@ -6,9 +6,9 @@ class GeniusClient
   base_uri 'https://api.genius.com'
   
   def initialize(access_token={})
+    access_token = Rails.application.credentials.genius[:access_token]
     @headers = {
-      # "Authorization" => "Bearer #{access_token}"
-      "Authorization" => "Bearer AY2XSojDZsjDQP6GyRgTuGiPicg5FHrrMteLH-NqoOrUggPeiG-cMz11iBUXLXnb"
+      "Authorization" => "Bearer #{access_token}"
     }
   end
 
